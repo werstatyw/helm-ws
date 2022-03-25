@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ template "roar-db.name" . }}
@@ -8,6 +8,9 @@ metadata:
     release: {{ .Release.Name }}
   namespace: {{ .Values.namespace }}
 spec:
+  selector:
+    matchLabels:
+      app: {{ template "roar-db.name" . }}
   replicas: {{ .Values.replicaCount }}
   template:
     metadata:

@@ -1,0 +1,6 @@
+dependencies:
+- name: roar-db
+  repository: http://192.168.49.2:31000
+  version: 0.1.0
+digest: sha256:d2cf98baca86db5dd30e220cd783e5910384f07248aebc8c676f8e17e260f6bb
+generated: "2022-03-25T16:49:53.00229561+03:00"
